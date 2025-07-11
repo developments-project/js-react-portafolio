@@ -144,3 +144,13 @@
   font-size: 1rem;
   letter-spacing: 2px;
 }
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* De 4 a 2 columnas */
+    gap: 1rem;
+  }
+  .codeLine {
+    font-size: 0.8rem; /* Fuente más pequeña */
+  }
+}

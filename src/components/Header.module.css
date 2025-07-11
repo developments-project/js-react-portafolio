@@ -36,3 +36,19 @@
 .header nav a:hover {
   opacity: 0.7; /* Hacemos el texto un poco transparente al pasar el mouse */
 }
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column; /* Apila los elementos */
+    gap: 1rem;
+  }
+  .header nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los links salten de línea si no caben */
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .header nav a {
+    margin: 0 0.5rem;
+  }
+}

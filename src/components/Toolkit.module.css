@@ -86,8 +86,11 @@
 }
 
 @media (max-width: 768px) {
-  /* Hacemos las tarjetas un poco más angostas en pantallas pequeñas */
-  .toolkitCard {
+  /* Hacemos las tarjetas más angostas */
+  .projectCard, .experienceCard, .serviceCard, .toolkitCard {
     flex: 0 0 300px;
+  }
+  .sectionBox {
+    margin: 0 1rem 4rem 1rem;
   }
 }
