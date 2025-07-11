@@ -1,0 +1,115 @@
+/* src/components/Experience.module.css */
+
+.experienceGrid {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 0.4rem;
+  padding: 1.5rem 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) transparent;
+}
+
+.experienceGrid::-webkit-scrollbar {
+  height: 8px;
+}
+.experienceGrid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.experienceGrid::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 20px;
+}
+
+.experienceCard {
+  flex: 0 0 350px;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Contenedor para la imagen o ícono */
+.experienceVisual {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem; /* Tamaño para el ícono de fallback */
+  color: var(--accent-color);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo específico para la <img> del logo, para que no se estire */
+.companyLogo {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+  background-color: white; /* Fondo blanco para logos con transparencia */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  text-align: left; /* Aseguramos que el texto esté alineado a la izquierda */
+}
+
+.cardContent h3 {
+  margin-bottom: 0.25rem;
+  color: #ff914d; /* Color naranja para el título de la tarjeta */
+}
+
+.cardContent p {
+  color: var(--text-color); /* Asegura que el texto de descripción sea el principal (blanco) */
+}
+
+/* Estilo específico para la descripción del puesto en Experience */
+.jobInfo {
+  font-size: 1rem;
+  color: var(--text-secondary-color) !important; /* Mantenemos el gris para el subtítulo del puesto */
+  margin-bottom: 1rem;
+}
+
+.tagContainer {
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba(58, 58, 60, 0.7);
+  color: var(--accent-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.scrollTarget {
+  scroll-margin-top: 100px; /* Crea un margen "invisible" para el scroll */
+}
+
+.sectionHeader h2 {
+  color: #ff914d;
+}
+
+@media (max-width: 768px) {
+  /* Hacemos las tarjetas un poco más angostas en pantallas pequeñas */
+  .experienceCard{
+    flex: 0 0 300px;
+  }
+}

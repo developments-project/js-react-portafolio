@@ -1,0 +1,9 @@
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: transparent; /* El wrapper es invisible */
+  
+  /* Eliminamos el padding superior que empujaba al Header hacia abajo */
+  /* Dejamos un padding inferior para dar espacio después del Footer */
+  padding-bottom: 6rem;
+}

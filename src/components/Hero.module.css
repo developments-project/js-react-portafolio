@@ -1,0 +1,49 @@
+.heroBox {
+  /* Le damos su propio padding y margen inferior */
+  padding: 8rem 2rem;
+  margin-bottom: 6rem;
+  background-color: var(--surface-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Nuevo contenedor para centrar el contenido */
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroBox h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  border: 3px solid var(--accent-color);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #ff914d;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .heroBox h1 {
+    font-size: 2rem; /* Reduce el tamaño del título principal */
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}

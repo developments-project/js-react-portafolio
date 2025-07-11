@@ -1,0 +1,7 @@
+.about {
+  max-width: 60ch; /* Limita el ancho de línea para mejor legibilidad */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+}

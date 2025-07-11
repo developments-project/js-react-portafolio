@@ -1,0 +1,146 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* --- NUEVA ANIMACIÓN PARA EL CURSOR --- */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--accent-color); }
+}
+
+@keyframes typing {
+  from { 
+    width: 0;
+    /* El cursor es visible desde el inicio de la escritura */
+    border-right-color: var(--accent-color);
+  }
+  to { 
+    width: 100%;
+    /* Al final, el cursor se vuelve transparente */
+    border-right-color: transparent;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0A0A0A;
+  z-index: 10000;
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+/* El contenedor exterior que tendrá el borde animado */
+.neonBorderBox {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 2px; /* Define el grosor del borde */
+  position: relative;
+  background: conic-gradient(from var(--angle), transparent 50%, var(--neon-color));
+  animation: rotate-border 4s linear infinite;
+  box-shadow: 0 0 10px var(--neon-color); 
+}
+
+/* El contenedor interior que tendrá el código y el fondo oscuro */
+.codeContainer {
+  background-color: #1A1A1A;
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative;
+  border: 2px solid transparent;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  box-sizing: border-box;
+  animation: rotate-border 4s linear infinite;
+}
+
+.languageHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.languageHeader h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: var(--font-main);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+}
+
+.codeLine {
+  margin: 0 1.5rem;
+  overflow: hidden;
+  white-space: pre;
+  width: 0;
+  text-align: left;
+  font-size: 1.1rem;
+  min-height: 1.6rem;
+  
+  /* El borde es el cursor. Inicia transparente. */
+  border-right: 3px solid transparent;
+
+  /* Aplicamos únicamente la animación de escritura */
+  animation-name: typing;
+  animation-fill-mode: forwards; /* Mantiene el estado final (ancho 100%, borde transparente) */
+  animation-duration: inherit;
+  animation-timing-function: inherit;
+  animation-delay: inherit;
+}
+
+/* Tus colores personalizados para íconos y sintaxis */
+.htmlIcon { color: #E34F26; }
+.javaIcon { color: #FF3B30; }
+.pythonIcon { color:#F7DF1E; }
+.cppIcon { color: #006fc4; }
+.phpIcon { color: #636799; }
+.jsIcon { color: #F7DF1E; }
+.sqlIcon { color: #008BFF; }
+.csIcon { color: #5734d4; }
+
+.html-tag { color: #e83e8c; }
+.html-text { color: #a9b7c6; }
+.java-keyword, .cs-keyword { color: #cc7832; }
+.java-className, .cs-className { color: #a9b7c6; }
+.java-methodName { color: #ffc66d; }
+.java-string, .py-string, .js-string, .cs-string, .sql-string, .cpp-string { color: #A3FF00; }
+.py-function { color: #61dafb; }
+.cpp-preprocessor { color: #808080; }
+.cpp-keyword { color: #cc7832; }
+.cpp-cout { color: #9876aa; }
+.php-tag { color: #8996b0; }
+.php-echo { color: #9876aa; }
+.js-console { color: #61dafb; }
+.sql-keyword { color: #c586c0; }
+
+.counter {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--accent-color);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}

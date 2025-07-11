@@ -1,0 +1,73 @@
+/* src/components/Footer.module.css */
+
+.footerBox {
+  background-color: var(--surface-color);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-color);
+  padding: 11rem 2rem;
+  text-align: center;
+}
+
+.footerBox h2 {
+  color: #ff914d;
+}
+
+/* Nuevo contenedor para centrar el contenido */
+.footerContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro {
+  max-width: 540px;
+  margin: 0 auto 2rem auto;
+  color: var(--text-secondary-color);
+}
+
+.introDos {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: var(--text-secondary-color);
+}
+
+.ctaButton { 
+  display: inline-block;  
+  background-color: var(--accent-color);
+  color: #111;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: none;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.socialLinks {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.socialLinks a {
+  color: var(--text-secondary-color);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #E34F26;
+}
+
+.copyright {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #ff914d; /* Usamos el color de acento */
+  opacity: 0.8;
+}
