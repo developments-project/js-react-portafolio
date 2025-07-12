@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* --- REGLA CLAVE PARA SOLUCIONAR EL PROBLEMA --- */
+/* Le decimos al contenedor principal de React que no interfiera con el scroll */
+#root, .App {
+  overflow: visible;
+}

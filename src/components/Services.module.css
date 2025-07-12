@@ -41,7 +41,7 @@
 }
 
 .serviceCard {
-  flex: 0 0 330px;
+  flex: 0 0 480px;
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;

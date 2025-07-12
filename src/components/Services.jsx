@@ -35,7 +35,8 @@ const servicesData = [
 const Services = () => {
   return (
     <motion.section
-      id="servicios"
+      id="services"
+      style={styles}
       className={styles.scrollTarget}
       initial={{ opacity: 0, x: 100 }} // Aparece desde la derecha
       whileInView={{ opacity: 1, x: 0 }}

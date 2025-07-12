@@ -7,6 +7,7 @@ const Hero = () => {
   return (
     // La etiqueta <section> ahora ocupa todo el ancho
     <motion.section
+      id="hero"
       className={styles.heroBox}
       initial={{ opacity: 0, y: 20 }} // Estado inicial: invisible y 20px abajo
       whileInView={{ opacity: 1, y: 0 }} // <-- Cambia a 'whileInView'

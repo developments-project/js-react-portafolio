@@ -43,7 +43,8 @@ const experienceData = [
 const Experience = () => {
   return (
     <motion.section
-      id="experiencia"
+      id="experience"
+      style={styles}
       className={styles.scrollTarget}
       initial={{ opacity: 0, x: -100 }} // <-- Aparece desde la izquierda
       whileInView={{ opacity: 1, x: 0 }}

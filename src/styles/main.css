@@ -29,6 +29,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main > section:first-child {
+  margin-top: 6rem;
+}
+
+footer {
+  margin-top: 6rem;
+}
+
 /* --- ESTILOS GLOBALES (Mobile-First) --- */
 
 section {

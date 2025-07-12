@@ -1,54 +1,33 @@
 /* src/components/Header.module.css */
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--surface-color);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.headerContent {
-  max-width: 1100px;
-  margin: 0 auto;
+  /* Hacemos el header visible en todos los tamaños de pantalla */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 1rem 1.5rem;
+  /* Posicionamiento fijo para que siempre esté visible en la esquina */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500; /* Un z-index alto para que esté sobre el contenido pero debajo del sidebar */
+  background: none; /* Lo hacemos transparente */
+  border: none;
 }
 
-.logo {
-  font-weight: 700;
+.menuBtn {
+  background: none;
+  border: none;
+  color: var(--text-color);
   font-size: 1.5rem;
-  text-decoration: none;
-  color: #ff914d; /* <-- CAMBIO AQUÍ */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.header nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: var(--accent-color); /* <-- CAMBIO AQUÍ */
-  transition: opacity 0.3s ease; /* Cambiamos la transición a opacidad */
+.menuBtn:hover {
+    transform: scale(1.1);
 }
 
-.header nav a:hover {
-  opacity: 0.7; /* Hacemos el texto un poco transparente al pasar el mouse */
-}
-
-@media (max-width: 768px) {
-  .headerContent {
-    flex-direction: column; /* Apila los elementos */
-    gap: 1rem;
-  }
-  .header nav {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los links salten de línea si no caben */
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .header nav a {
-    margin: 0 0.5rem;
-  }
+.headerTitle {
+  /* Ocultamos el texto "Portafolio" que ya no es necesario */
+  display: none;
 }

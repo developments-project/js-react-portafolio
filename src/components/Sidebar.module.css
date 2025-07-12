@@ -1,0 +1,65 @@
+/* src/components/Sidebar.module.css */
+
+/* Estilos base que se aplican a todos los tamaños de pantalla */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px; /* Ancho fijo para la barra lateral */
+  height: 100vh;
+  background-color: var(--surface-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-right: 1px solid var(--border-color);
+  padding: 2rem;
+  transform: translateX(-100%); /* Oculto a la izquierda por defecto */
+  transition: transform 0.4s ease-in-out;
+  z-index: 2000; /* El z-index más alto para que aparezca sobre todo */
+  display: flex;
+  flex-direction: column;
+}
+
+/* La clase .open hace que el sidebar sea visible */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.sidebarHeader h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav a:hover {
+  color: var(--accent-color);
+}
+
+/* La media query ya no es necesaria, porque el comportamiento es el mismo siempre */

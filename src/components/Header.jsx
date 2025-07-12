@@ -1,19 +1,15 @@
 import React from 'react';
 import styles from './Header.module.css';
+import { FaBars } from 'react-icons/fa';
 
-const Header = () => {
+// 1. Aceptamos 'toggleSidebar' como prop
+const Header = ({ toggleSidebar }) => {
   return (
-    <header id="header" className={styles.header}>
-      <div className={styles.headerContent}>
-        <a href="/" className={styles.logo}>Portafolio</a>
-        <nav>
-          <a href="#experiencia">Experiencia</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#herramientas">Herramientas</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </div>
+    <header className={styles.header}>
+      {/* 2. El botón llama a la función cuando se le hace clic */}
+      <button className={styles.menuBtn} onClick={toggleSidebar} aria-label="Abrir menú">
+        <FaBars />
+      </button>
     </header>
   );
 };

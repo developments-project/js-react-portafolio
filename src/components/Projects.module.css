@@ -22,33 +22,42 @@
 }
 
 .projectGrid {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  gap: 0.4rem;
-  padding: 1.5rem 2rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) transparent;
+/* Hacemos que la fila de tarjetas se centre por sí misma */
+  text-align: center;
+  padding: 1rem 0;
 }
 
-.projectGrid::-webkit-scrollbar {
+.projectGrid > div {
+  display: inline-grid;
+  grid-auto-columns: 300px;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #FFA500 transparent;
+}
+
+.projectGrid > div::-webkit-scrollbar {
   height: 8px;
 }
-.projectGrid::-webkit-scrollbar-track {
+.projectGrid > div::-webkit-scrollbar-track {
   background: transparent;
 }
-.projectGrid::-webkit-scrollbar-thumb {
+.projectGrid > div::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
   border-radius: 20px;
 }
 
 .projectCard {
-  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .projectCard:hover {
@@ -69,6 +78,7 @@
 
 .cardContent {
   padding: 1.5rem;
+  
 }
 
 .cardContent h3 {
