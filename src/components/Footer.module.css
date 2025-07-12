@@ -5,7 +5,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid var(--border-color);
-  padding: 14rem 1rem; /* Padding reducido para móvil */
+  padding: 3rem 1rem; /* Padding reducido para móvil */
   text-align: center;
 }
 
@@ -73,7 +73,7 @@
 
 @media (min-width: 769px) {
   .footerBox {
-    padding: 11rem 2rem;
+    padding: 13rem 2rem;
   }
 
   .socialLinks a {
