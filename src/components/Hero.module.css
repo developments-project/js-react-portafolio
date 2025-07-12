@@ -1,49 +1,53 @@
+/* Estilos base para móvil */
 .heroBox {
-  /* Le damos su propio padding y margen inferior */
-  padding: 8rem 2rem;
-  margin-bottom: 6rem;
+  padding: 4rem 1rem;
+  margin-bottom: 4rem;
   background-color: var(--surface-color);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   text-align: center;
   border-bottom: 1px solid var(--border-color);
 }
 
-/* Nuevo contenedor para centrar el contenido */
 .heroContent {
   max-width: 800px;
   margin: 0 auto;
 }
 
 .heroBox h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   color: var(--accent-color);
 }
 
 .profileImage {
-  width: 150px;
-  height: 150px;
+  width: 130px; /* Un poco más pequeña en móvil */
+  height: 130px;
   border-radius: 50%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   border: 3px solid var(--accent-color);
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  color: #ff914d;
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.1rem;
+  color: var(--text-secondary-color);
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
 }
 
-@media (max-width: 768px) {
+/* Estilos para pantallas más grandes */
+@media (min-width: 769px) {
   .heroBox {
-    padding: 4rem 1rem;
-    margin-bottom: 4rem;
+    padding: 8rem 2rem;
+    margin-bottom: 6rem;
   }
+
   .heroBox h1 {
-    font-size: 2.2rem; /* Título más pequeño */
+    font-size: 3rem; /* Título grande para escritorio */
+  }
+
+  .profileImage {
+    width: 150px;
+    height: 150px;
   }
 }

@@ -1,34 +1,75 @@
+/* --- REGLAS GLOBALES PARA PREVENIR DESBORDAMIENTO --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* ---------------------------------------------------- */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 body {
+  /* Mantenemos tu imagen de fondo personalizada */
   background-image: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('../assets/motherboard.jpeg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  
+  /* Estilos base del texto */
   color: var(--text-color);
   font-family: var(--font-main);
   line-height: 1.6;
   font-size: 1.1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* --- ESTILOS GLOBALES (Mobile-First) --- */
+
 section {
-  /* Eliminamos el padding y el borde para que el espacio lo controle el margen */
   padding: 0; 
   border-bottom: none; 
-
-  /* Añadimos un margen inferior grande para crear el espacio */
-  margin-bottom: 6rem; 
+  margin-bottom: 4rem;
 }
 
 section:last-of-type {
-  margin-bottom: 0; /* La última sección no necesita margen inferior */
+  margin-bottom: 0;
 }
 
-/* ... (tus estilos globales anteriores) ... */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
 
-@media (max-width: 768px) {
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Estilos para pantallas más grandes (Desktop) */
+@media (min-width: 769px) {
+  section {
+    margin-bottom: 6rem;
+  }
   h2 {
-    font-size: 2rem; /* Reduce el tamaño de todos los títulos de sección */
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .container {
+     padding: 0 2rem;
   }
 }

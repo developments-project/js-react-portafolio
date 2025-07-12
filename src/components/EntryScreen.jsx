@@ -8,18 +8,9 @@ const Preloader = ({ onEnter }) => {
     <div className={styles.preloader} onClick={onEnter}>
       <div className={styles.name}>
         <span>L</span>
-        <span>E</span>
-        <span>O</span>
-        <span>N</span>
-        <span> </span>
         <span>F</span>
-        <span>E</span>
-        <span>R</span>
-        <span>N</span>
-        <span>A</span>
-        <span>N</span>
-        <span>D</span>
-        <span>O</span>
+        <span>C</span>
+        <span>M</span>
       </div>
       <div className={styles.instructions}>
         Click to continue

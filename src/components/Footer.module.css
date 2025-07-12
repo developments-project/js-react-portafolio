@@ -2,10 +2,10 @@
 
 .footerBox {
   background-color: var(--surface-color);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid var(--border-color);
-  padding: 11rem 2rem;
+  padding: 14rem 1rem; /* Padding reducido para móvil */
   text-align: center;
 }
 
@@ -13,14 +13,13 @@
   color: #ff914d;
 }
 
-/* Nuevo contenedor para centrar el contenido */
 .footerContent {
   max-width: 800px;
   margin: 0 auto;
 }
 
 .intro {
-  max-width: 540px;
+  max-width: 600px;
   margin: 0 auto 2rem auto;
   color: var(--text-secondary-color);
 }
@@ -57,7 +56,7 @@
 
 .socialLinks a {
   color: var(--text-secondary-color);
-  font-size: 2rem;
+  font-size: 1.8rem; /* Iconos un poco más pequeños en móvil */
   transition: color 0.3s ease;
 }
 
@@ -67,7 +66,21 @@
 
 .copyright {
   margin-top: 3rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #ff914d; /* Usamos el color de acento */
   opacity: 0.8;
+}
+
+@media (min-width: 769px) {
+  .footerBox {
+    padding: 11rem 2rem;
+  }
+
+  .socialLinks a {
+    font-size: 2rem;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
 }

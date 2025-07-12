@@ -119,8 +119,8 @@
 .csIcon { color: #5734d4; }
 
 .html-tag { color: #e83e8c; }
-.html-text { color: #a9b7c6; }
-.java-keyword, .cs-keyword { color: #cc7832; }
+.html-text, .java-text { color: #a9b7c6; }
+.java-keyword, .cs-keyword, .py-keyword { color: #cc7832; }
 .java-className, .cs-className { color: #a9b7c6; }
 .java-methodName { color: #ffc66d; }
 .java-string, .py-string, .js-string, .cs-string, .sql-string, .cpp-string { color: #A3FF00; }
@@ -135,7 +135,7 @@
 
 .counter {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   left: 0;
   right: 0;
   text-align: center;

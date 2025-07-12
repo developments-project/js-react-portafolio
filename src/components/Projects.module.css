@@ -1,5 +1,26 @@
 /* src/components/Projects.module.css */
 
+.sectionBox {
+  scroll-margin-top: 100px;
+  background-color: var(--surface-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 0; /* Padding vertical reducido */
+  margin: 0 1rem 4rem 1rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  color: var(--accent-color);
+}
+
 .projectGrid {
   display: flex;
   flex-direction: row;
@@ -22,7 +43,7 @@
 }
 
 .projectCard {
-  flex: 0 0 350px;
+  flex: 0 0 280px;
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;
@@ -88,12 +109,21 @@
   color: #ff914d ;
 }
 
-@media (max-width: 768px) {
-  /* Hacemos las tarjetas más angostas */
-  .projectCard, .experienceCard, .serviceCard, .toolkitCard {
-    flex: 0 0 300px;
-  }
+/* Estilos para pantallas más grandes */
+@media (min-width: 769px) {
   .sectionBox {
-    margin: 0 1rem 4rem 1rem;
+    padding: 3rem 0;
+    margin: 0 1rem 6rem 1rem;
+  }
+  .sectionHeader {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  .projectGrid {
+    gap: 0.4rem;
+    padding: 1.5rem 2rem;
+  }
+  .projectCard {
+    flex: 0 0 350px; /* Ancho original para escritorio */
   }
 }
