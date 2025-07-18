@@ -38,7 +38,7 @@ const Services = () => {
       transition={{ duration: 0.8 }}
     >
       <div className={styles.sectionHeader}>
-        <h2>{translations.sections.toolkit}</h2>
+        <h2>{translations.sections.services}</h2>
       </div>
       <div className={styles.servicesGrid}>
         {translations.servicesData.map((service, index) => (
