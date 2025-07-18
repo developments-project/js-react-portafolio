@@ -40,7 +40,25 @@ section:last-of-type {
 /* ... (tus estilos globales anteriores) ... */
 
 @media (max-width: 768px) {
+    body {
+    /* 3. Solo en pantallas grandes, cargamos la imagen de alta resolución */
+     background-image: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('../assets/motherboard-mobile.jpeg');
+    
+  }
+
+  section {
+    margin-bottom: 5rem; /* Margen más pequeño en móvil */
+  }
+
   h2 {
-    font-size: 2rem; /* Reduce el tamaño de todos los títulos de sección */
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 0 1rem; /* Padding reducido en móvil */
   }
 }

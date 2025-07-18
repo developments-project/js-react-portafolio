@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px; /* Ancho fijo para la barra lateral */
+  width: 290px; /* Ancho fijo para la barra lateral */
   height: 100vh;
   background-color: var(--surface-color);
   backdrop-filter: blur(10px);
