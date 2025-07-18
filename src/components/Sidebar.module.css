@@ -33,7 +33,7 @@
 
 .sidebarHeader h3 {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: var(--accent-color);
 }
 
 .closeBtn {
@@ -63,10 +63,14 @@
 }
 
 .languageSwitcherContainer {
-  margin-top: auto; /* <-- La clave para empujar el elemento hacia abajo */
-  padding-top: 2rem; /* Un poco de espacio para que no se pegue a los links */
+  margin-top: auto; 
+  padding-top: 2rem;
   display: flex;
   justify-content: center;
 }
 
-/* La media query ya no es necesaria, porque el comportamiento es el mismo siempre */
+@media (min-width: 769px) {
+  .languageSwitcherContainer {
+    margin-top: auto;
+  }
+}
