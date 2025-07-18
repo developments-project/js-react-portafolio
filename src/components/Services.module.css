@@ -41,7 +41,7 @@
 }
 
 .serviceCard {
-  flex: 0 0 480px;
+  flex: 0 0 350px;
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;
@@ -106,20 +106,9 @@
   color: #ff914d;
 }
 
-@media (min-width: 769px) {
-  .sectionBox {
-    padding: 3rem 0;
-    margin: 0 1rem 6rem 1rem;
-  }
-  .sectionHeader {
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-  }
-  .servicesGrid {
-    gap: 0.4rem;
-    padding: 1.5rem 2rem;
-  }
-  .servicesCard {
-    flex: 0 0 350px; /* Ancho original para escritorio */
+@media (max-width: 768px) {
+  /* Hacemos las tarjetas un poco más angostas en pantallas pequeñas */
+  .serviceCard{
+    flex: 0 0 330px;
   }
 }

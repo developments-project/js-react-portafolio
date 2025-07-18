@@ -47,7 +47,7 @@
 /* El contenedor exterior que tendrá el borde animado */
 .neonBorderBox {
   width: 100%;
-  max-width: 600px;
+  max-width: 320px;
   border-radius: 10px;
   padding: 2px; /* Define el grosor del borde */
   position: relative;
@@ -94,7 +94,7 @@
   white-space: pre;
   width: 0;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   min-height: 1.6rem;
   
   /* El borde es el cursor. Inicia transparente. */
@@ -141,16 +141,24 @@
   text-align: center;
   color: var(--accent-color);
   font-family: var(--font-main);
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .gridContainer {
     grid-template-columns: repeat(2, 1fr); /* De 4 a 2 columnas */
     gap: 1rem;
   }
   .codeLine {
-    font-size: 0.8rem; /* Fuente más pequeña */
+    font-size: 1rem; /* Fuente más pequeña */
   }
+  
+  .neonBorderBox {
+  max-width: 600px;
+  }
+
+  .counter {
+  font-size: 1rem;
+}
 }

@@ -1,0 +1,24 @@
+.switcher {
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.switcher button {
+  background: none;
+  border: none;
+  color: var(--text-secondary-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.switcher button.active {
+  background-color: var(--accent-color);
+  color: #111;
+}

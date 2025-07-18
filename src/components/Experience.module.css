@@ -22,71 +22,80 @@
 }
 
 .experienceGrid {
-/* Hacemos que la fila de tarjetas se centre por sí misma */
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.experienceGrid > div {
-  display: inline-grid;
-  grid-auto-columns: 300px;
+  display: flex;
+  flex-direction: row;
   overflow-x: auto;
-  gap: 1rem;
+  gap: 0.4rem;
   padding: 1.5rem 2rem;
-  max-width: 100%;
   scrollbar-width: thin;
-  scrollbar-color: #FFA500 transparent;
+  scrollbar-color: var(--accent-color) transparent;
 }
 
-.experienceGrid > div::-webkit-scrollbar {
+.experienceGrid::-webkit-scrollbar {
   height: 8px;
 }
-.experienceGrid > div::-webkit-scrollbar-track {
+.experienceGrid::-webkit-scrollbar-track {
   background: transparent;
 }
-.experienceGrid > div::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
+.experienceGrid::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
   border-radius: 20px;
 }
 
 .experienceCard {
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 330px;
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
-  text-align: left;
 }
 
 .experienceCard:hover {
   transform: translateY(-5px);
 }
 
-/* Estilos para el contenedor del ícono */
-.experienceIcon {
+/* Contenedor para la imagen o ícono */
+.experienceVisual {
   width: 100%;
   height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 5rem;
+  font-size: 5rem; /* Tamaño para el ícono de fallback */
   color: var(--accent-color);
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo específico para la <img> del logo, para que no se estire */
+.companyLogo {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+  background-color: white; /* Fondo blanco para logos con transparencia */
+  padding: 10px;
+  border-radius: 8px;
+}
+
 .cardContent {
   padding: 1.5rem;
-  
+  text-align: left; /* Aseguramos que el texto esté alineado a la izquierda */
 }
 
 .cardContent h3 {
+  margin-bottom: 0.25rem;
   color: #ff914d; /* Color naranja para el título de la tarjeta */
 }
 
 .cardContent p {
   color: var(--text-color); /* Asegura que el texto de descripción sea el principal (blanco) */
+}
+
+/* Estilo específico para la descripción del puesto en Experience */
+.jobInfo {
+  font-size: 1rem;
+  color: var(--text-secondary-color) !important; /* Mantenemos el gris para el subtítulo del puesto */
+  margin-bottom: 1rem;
 }
 
 .tagContainer {
@@ -116,10 +125,9 @@
 }
 
 .sectionHeader h2 {
-  color: #ff914d ;
+  color: #ff914d;
 }
 
-/* Estilos para pantallas más grandes */
 @media (min-width: 769px) {
   .sectionBox {
     padding: 3rem 0;

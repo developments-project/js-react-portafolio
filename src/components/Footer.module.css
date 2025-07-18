@@ -6,17 +6,19 @@
   -webkit-backdrop-filter: blur(20px);
   border-top: 1px solid var(--border-color);
   margin-top: 4rem;
-  padding: 15rem 1rem; /* Padding reducido para móvil */
+  padding: 14.3rem 1rem;
   text-align: center;
 }
 
 .footerBox h2 {
+  font-size: 1.95rem;
   color: #ff914d;
 }
 
 .footerContent {
-  max-width: 800px;
+  max-width: 430px;
   margin: 0 auto;
+  font-size: 0.75rem;
 }
 
 .intro {
@@ -26,7 +28,7 @@
 }
 
 .introDos {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto 2rem auto;
   color: var(--text-secondary-color);
 }
@@ -57,7 +59,7 @@
 
 .socialLinks a {
   color: var(--text-secondary-color);
-  font-size: 1.8rem; /* Iconos un poco más pequeños en móvil */
+  font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
@@ -76,6 +78,16 @@
   .footerBox {
     padding: 13rem 2rem;
   }
+
+  .footerBox h2 {
+  font-size: 2.5rem;
+  }
+
+  .footerContent {
+  max-width: 440px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
 
   .socialLinks a {
     font-size: 2rem;

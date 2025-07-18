@@ -7,10 +7,16 @@ const Preloader = ({ onEnter }) => {
     // 2. Añadimos el evento onClick al div principal
     <div className={styles.preloader} onClick={onEnter}>
       <div className={styles.name}>
-        <span>L</span>
-        <span>F</span>
-        <span>C</span>
-        <span>M</span>
+        <span>B</span>
+        <span>I</span>
+        <span>E</span>
+        <span>N</span>
+        <span>V</span>
+        <span>E</span>
+        <span>N</span>
+        <span>I</span>
+        <span>D</span>
+        <span>O</span>
       </div>
       <div className={styles.instructions}>
         Click to continue

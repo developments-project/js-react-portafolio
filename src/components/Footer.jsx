@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { LanguageContext } from '../context/LanguageContext'; 
 import styles from "./Footer.module.css";
 import { FaGitlab } from "react-icons/fa";
 import { motion } from "framer-motion"; // 1. Importamos motion
 
 const Footer = () => {
+
+  const { translations } = useContext(LanguageContext);
+
   return (
     // La etiqueta <footer> ahora ocupa todo el ancho
     <motion.footer
@@ -16,13 +20,12 @@ const Footer = () => {
     >
       {/* Este nuevo div centrará el contenido */}
       <div className={styles.footerContent}>
-        <h2>Hablemos</h2>
+        <h2>{translations.footer.title}</h2>
         <p style={{textAlign:'justify'}} className={styles.intro}>
-          Estoy disponible para nuevos retos y oportunidades de trabajo.
-          Si crees que puedo aportar valor a tu equipo, conversemos.
+          {translations.footer.invitation}
         </p>
         <a href="mailto:leonfernando.mx@gmail.com" className={styles.ctaButton}>
-          Envíame un correo
+          {translations.footer.cta}
         </a>
         <div className={styles.socialLinks}>
           <a

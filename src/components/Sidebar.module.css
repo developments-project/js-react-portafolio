@@ -62,4 +62,11 @@
   color: var(--accent-color);
 }
 
+.languageSwitcherContainer {
+  margin-top: auto; /* <-- La clave para empujar el elemento hacia abajo */
+  padding-top: 2rem; /* Un poco de espacio para que no se pegue a los links */
+  display: flex;
+  justify-content: center;
+}
+
 /* La media query ya no es necesaria, porque el comportamiento es el mismo siempre */

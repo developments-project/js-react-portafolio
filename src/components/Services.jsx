@@ -1,27 +1,19 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { LanguageContext } from '../context/LanguageContext'; 
 import styles from "./Services.module.css";
 import { FaCode, FaCloudUploadAlt, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const servicesData = [
+const staticServicesData = [
   {
-    category: "Desarrollo Backend",
-    description:
-      "Creación de APIs RESTful, microservicios y lógica de negocio robusta para aplicaciones de alto rendimiento y escalabilidad.",
     tags: ["Java", "Spring", "Python", "Node.js", "API REST", "Microservicios"],
     icon: <FaCode />,
   },
   {
-    category: "Arquitectura Cloud & DevOps",
-    description:
-      "Diseño e implementación de soluciones en la nube (AWS, GCP, Azure) y gestión de contenedores para despliegues eficientes.",
     tags: ["AWS", "Docker", "Kubernetes", "CI/CD", "Jenkins", "Git"],
     icon: <FaCloudUploadAlt />,
   },
   {
-    category: "Inteligencia Artificial & Ciberseguridad",
-    description:
-      "Implementación de modelos de IA y soluciones de ciberseguridad para optimizar procesos y proteger aplicaciones.",
     tags: [
       "IA",
       "Ciberseguridad (Cisco)",
@@ -33,10 +25,12 @@ const servicesData = [
 ];
 
 const Services = () => {
+
+  const { translations } = useContext(LanguageContext);
+
   return (
     <motion.section
-      id="services"
-      style={styles}
+      id="servicios"
       className={styles.scrollTarget}
       initial={{ opacity: 0, x: 100 }} // Aparece desde la derecha
       whileInView={{ opacity: 1, x: 0 }}
@@ -44,17 +38,17 @@ const Services = () => {
       transition={{ duration: 0.8 }}
     >
       <div className={styles.sectionHeader}>
-        <h2>Servicios</h2>
+        <h2>{translations.sections.toolkit}</h2>
       </div>
       <div className={styles.servicesGrid}>
-        {servicesData.map((service, index) => (
+        {translations.servicesData.map((service, index) => (
           <div key={index} className={styles.serviceCard}>
-            <div className={styles.serviceIcon}>{service.icon}</div>
+            <div className={styles.serviceIcon}>{staticServicesData[index].icon}</div>
             <div className={styles.cardContent}>
               <h3>{service.category}</h3>
               <p>{service.description}</p>
               <div className={styles.tagContainer}>
-                {service.tags.map((tag) => (
+                {staticServicesData[index].tags.map((tag) => (
                   <span key={tag} className={styles.tag}>
                     {tag}
                   </span>

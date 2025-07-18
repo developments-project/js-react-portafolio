@@ -22,49 +22,39 @@
 }
 
 .toolkitGrid {
-/* Hacemos que la fila de tarjetas se centre por sí misma */
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.toolkitGrid > div {
-  display: inline-grid;
-  grid-auto-columns: 300px;
+  display: flex;
+  flex-direction: row;
   overflow-x: auto;
-  gap: 1rem;
+  gap: 0.4rem;
   padding: 1.5rem 2rem;
-  max-width: 100%;
   scrollbar-width: thin;
-  scrollbar-color: #FFA500 transparent;
+  scrollbar-color: var(--accent-color) transparent;
 }
 
-.toolkitGrid > div::-webkit-scrollbar {
+.toolkitGrid::-webkit-scrollbar {
   height: 8px;
 }
-.toolkitGrid > div::-webkit-scrollbar-track {
+.toolkitGrid::-webkit-scrollbar-track {
   background: transparent;
 }
-.toolkitGrid > div::-webkit-scrollbar-thumb {
+.toolkitGrid::-webkit-scrollbar-thumb {
   background-color: var(--accent-color);
   border-radius: 20px;
 }
 
 .toolkitCard {
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 350px;
   border: 1px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
-  text-align: left;
 }
 
 .toolkitCard:hover {
   transform: translateY(-5px);
 }
 
-/* Estilos para el contenedor del ícono */
 .toolkitIcon {
   width: 100%;
   height: 220px;
@@ -78,7 +68,6 @@
 
 .cardContent {
   padding: 1.5rem;
-  
 }
 
 .cardContent h3 {
@@ -116,24 +105,12 @@
 }
 
 .sectionHeader h2 {
-  color: #ff914d ;
+  color: #ff914d;
 }
 
-/* Estilos para pantallas más grandes */
-@media (min-width: 769px) {
-  .sectionBox {
-    padding: 3rem 0;
-    margin: 0 1rem 6rem 1rem;
-  }
-  .sectionHeader {
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-  }
-  .toolkitGrid {
-    gap: 0.4rem;
-    padding: 1.5rem 2rem;
-  }
+@media (max-width: 768px) {
+  /* Hacemos las tarjetas un poco más angostas en pantallas pequeñas */
   .toolkitCard {
-    flex: 0 0 350px; /* Ancho original para escritorio */
+    flex: 0 0 330px;
   }
 }

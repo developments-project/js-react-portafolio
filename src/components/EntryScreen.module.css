@@ -17,9 +17,9 @@
   color: var(--accent-color);
   font-family: var(--font-main);
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   /* La animación de entrada se mantiene */
   animation: fadeIn 1.5s ease-in;
 }
@@ -55,4 +55,11 @@
   to {
     opacity: 1;
   }
+}
+
+@media (min-width: 769px) {
+.name {
+  font-size: 3.5rem;
+    gap: 0.7rem;
+}
 }
