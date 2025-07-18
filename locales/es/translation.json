@@ -1,0 +1,89 @@
+{
+  "sidebar": {
+    "name": "Leon Fernando",
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "toolkit": "Herramientas",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "name": "Leon Fernando",
+    "subtitle": "Desarrollador Fullstack",
+    "bio": "Soy un profesional apasionado por los desafíos, el aprendizaje continuo y la aplicación de soluciones innovadoras a problemas tecnológicos complejos. Con más de cinco años de experiencia, domino el ciclo completo de desarrollo de software, desde el diseño inicial hasta la implementación de proyectos robustos en producción con resultados efectivos y eficientes."
+  },
+  "sections": {
+    "experience": "Experiencia Profesional",
+    "projects": "Mis Proyectos Recientes",
+    "toolkit": "Mi Conjunto de Herramientas",
+    "services": "Servicios"
+  },
+  "experienceData": [
+    {
+      "company": "BanCoppel",
+      "role": "Desarrollador Backend Java",
+      "period": "2022 – 2025",
+      "description": "Participé en el proyecto de Pago de servicios y tiempo aire, desde el requerimiento inicial hasta producción, incluyendo análisis, diseño, CI/CD y soporte."
+    },
+    {
+      "company": "Laboratorios Medico Polanco",
+      "role": "Desarrollador Java",
+      "period": "2022",
+      "description": "Desarrollo y administración de aplicaciones Web ERP y creación de Webservices (API Rest) y Microservicios para diversos sistemas internos."
+    },
+    {
+      "company": "Freelance",
+      "role": "Desarrollador Fullstack",
+      "period": "2020 - 2021",
+      "description": "Desarrollo de sitios web y sistemas a medida para diversos clientes, incluyendo constructoras y bibliotecas."
+    }
+  ],
+  "projectsData": [
+    {
+      "title": "Pago de Servicios App BanCoppel",
+      "description": "Desarrollo de microservicios para el pago de servicios de gobierno y tiempo aire en la App BanCoppel."
+    },
+    {
+      "title": "Detección de Talentos con IA",
+      "description": "Proyecto de innovación para la detección de nuevos talentos usando Razonamiento Aproximado (IA)."
+    },
+    {
+      "title": "Alexa Skills con AWS",
+      "description": "Desarrollo de Skills para Amazon Alexa, utilizando infraestructura serverless en AWS."
+    }
+  ],
+  "toolkitData": [
+    {
+      "category": "Backend",
+      "description": "Construcción de la lógica de servidor y APIs robustas para aplicaciones de alto rendimiento."
+    },
+    {
+      "category": "Cloud & DevOps",
+      "description": "Infraestructura, despliegue y automatización para asegurar la escalabilidad y disponibilidad de las aplicaciones."
+    },
+    {
+      "category": "Frontend",
+      "description": "Desarrollo de interfaces de usuario interactivas y accesibles para complementar la lógica de negocio."
+    }
+  ],
+  "servicesData": [
+    {
+      "category": "Desarrollo Backend",
+      "description": "Creación de APIs RESTful, microservicios y lógica de negocio robusta para aplicaciones de alto rendimiento y escalabilidad."
+    },
+    {
+      "category": "Arquitectura Cloud & DevOps",
+      "description": "Diseño e implementación de soluciones en la nube (AWS, GCP, Azure) y gestión de contenedores para despliegues eficientes."
+    },
+    {
+      "category": "Inteligencia Artificial & Ciberseguridad",
+      "description": "Implementación de modelos de IA y soluciones de ciberseguridad para optimizar procesos y proteger aplicaciones."
+    }
+  ],
+  "footer": {
+    "title": "Hablemos",
+    "invitation": "Estoy disponible para oportunidades freelance y puestos de tiempo completo. Si crees que puedo aportar valor a tu equipo, me encantaría conversar.",
+    "cta": "Envíame un correo"
+  }
+}
