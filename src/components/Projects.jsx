@@ -33,7 +33,7 @@ const Projects = ({ style }) => {
       id="proyectos"
       style={style}
       className={styles.scrollTarget}
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8 }}
